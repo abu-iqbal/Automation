@@ -1,0 +1,7 @@
+QA:http://automationpractice.com/index.php
+
+#############
+#Choose from the following options - We can switch to any environment for running the scripts
+#QA
+#Stage
+#Prod
