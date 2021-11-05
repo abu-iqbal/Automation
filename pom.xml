@@ -79,7 +79,6 @@
                             <outputDirectory>${project.basedir}/src/test/report/cucumber-reports</outputDirectory>
                             <cucumberOutput>${project.basedir}/src/test/report/cucumber.json</cucumberOutput>
                             <skippedFails>true</skippedFails>
-                            <enableFlashCharts>false</enableFlashCharts>
                             <buildNumber>${project.version}</buildNumber>
                         </configuration>
                     </execution>

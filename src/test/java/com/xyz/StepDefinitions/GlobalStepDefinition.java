@@ -14,12 +14,12 @@ public class GlobalStepDefinition {
 
     public void InvokeDriver(String url)
     {
-        driver= Hooks.driver;
+        driver= Hooks.driver;  // assigning the diver to hooks driver which launches the browser
         comp = new Components();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.MILLISECONDS);
         driver.manage().window().maximize();
         driver.get(url);
-        projectPageFactory = new ProjectPageFactory(driver);
+        projectPageFactory = new ProjectPageFactory(driver);  // Initiates all pageclasses
 
     }
 }
