@@ -12,14 +12,22 @@ public class GlobalStepDefinition {
     public static ProjectPageFactory projectPageFactory;
     public static Components comp;
 
-    public void InvokeDriver(String url)
+    public void InvokeDriver(String url) throws InterruptedException
     {
         driver= Hooks.driver;  // assigning the diver to hooks driver which launches the browser
         comp = new Components();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.MILLISECONDS);
-        driver.manage().window().maximize();
-        driver.get(url);
-        projectPageFactory = new ProjectPageFactory(driver);  // Initiates all pageclasses
 
+        if(driver !=null) {
+
+            driver.manage().timeouts().implicitlyWait(20, TimeUnit.MILLISECONDS);
+            driver.manage().window().maximize();
+            driver.get(url);
+            projectPageFactory = new ProjectPageFactory(driver);  // Initiates all pageclasses
+            //DriverWaitUtility.waitForPageLoad(driver);
+        }
+        else
+        {
+            System.out.println("Driver is null:-");
+        }
     }
 }
